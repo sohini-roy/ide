@@ -3,7 +3,11 @@
 # Coding Blocks IDE  
 Coding Blocks IDE is an online IDE which supports compliation of multiple programming languages. 
 
+
+![alt img](http://i.imgur.com/tWLND3T.png)
+
 [Live Demo](https://codingblocks.com/ide/)
+
 
 ## Table of Contents
 
@@ -44,11 +48,11 @@ Code can be downloaded with the name specified by the user.
 Code can be uploaded from local system and the editor will automatically detect the language.
 
 ### AutoSave and Manual Save
-Code and editor settings gets auto-saved after every 30 seconds. To prevent lose of code on closing the window accidently. User can also save the code automatially by clickint the save button.
+Code and editor settings gets auto-saved after every 30 seconds to prevent lose of code on closing the window accidently. User can also save the code manually by clicking the save button.
 
 ### Customizing the Editor
 
-Editor can be customised in the  the settings menu. 
+Editor can be customized in the the settings menu. 
 
 * **THEMES**: Choose between many themes available.
 * **FONTS**: Font family of the text in the editor.
