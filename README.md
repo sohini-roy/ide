@@ -1,7 +1,8 @@
 ![alt img](http://i.imgur.com/mTjKodQ.png)
 
 # Coding Blocks IDE  
-Coding Blocks IDE is an online IDE which supports compliation of multiple programming languages . 
+Coding Blocks IDE is an online IDE which supports compliation of multiple programming languages. 
+
 [Live Demo](https://codingblocks.com/ide/)
 
 ## Table of Contents
@@ -15,9 +16,10 @@ Coding Blocks IDE is an online IDE which supports compliation of multiple progra
   - [AutoSave and Manual Save](#autosave-and-manual-save)
   - [Customizing the Editor](#customizing-the-editor)
 - [Functions](#functions)
+- [API](#api)
 - [Contributing](#contributing)
   - [Opening Issues](#opening-issues)
-- [API](#api)
+
 
 ## Features 
 This responsive online code editor and compiler have the following features.
@@ -48,7 +50,7 @@ Code and editor settings gets auto-saved after every 30 seconds. To prevent lose
 
 Editor can be customised in the  the settings menu. 
 
-* **THEMES**: Choose between many themes Editor theme.
+* **THEMES**: Choose between many themes available.
 * **FONTS**: Font family of the text in the editor.
 * **SIZE**: Size of the font in the editor.
 * **RESET** : Resets all the setting to default.
@@ -62,6 +64,12 @@ Editor can be customised in the  the settings menu.
 
 ![alt Img](http://i.imgur.com/AblFpfZ.png)
 
+
+## API 
+This hits the Coding Blocks Judge API, which you can find documented here.
+
+<http://codingblocks.com/judge-blocks>
+
 ## Contributing
 
 ### Opening Issues
@@ -69,8 +77,5 @@ Editor can be customised in the  the settings menu.
 
 Before you open a new issue, make sure it isn't already in the list of [existing issues.](http://www.github.com/coding-blocks/ide/issues)
 
-## API 
-This hits the Coding Blocks Judge API, which you can find documented here
 
-<http://codingblocks.com/judge-blocks>
 
