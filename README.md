@@ -1,4 +1,4 @@
-# Coding Blocks IDE
+# Coding Blocks IDE  ![alt img](http://i.imgur.com/mTjKodQ.png)
 Coding Blocks IDE is an online IDE which supports compliation of multiple programming languages . 
 [Live Demo](https://codingblocks.com/ide/)
 
@@ -12,13 +12,14 @@ Coding Blocks IDE is an online IDE which supports compliation of multiple progra
   - [Upload Code](#upload-code)
   - [AutoSave and Manual Save](#autosave-and-manual-save)
   - [Customizing the Editor](#customizing-the-editor)
-- [Funcitons](#funcitons)
+- [Functions](#functions)
 - [Contributing](#contributing)
   - [Opening Issues](#opening-issues)
 - [API](#api)
 
 ## Features 
- 
+This responsive online code editor and compiler have the following features.
+
 ### Multiple Programming Languages Support 
 * C 
 * C++
@@ -45,27 +46,26 @@ Code and editor settings gets auto-saved after every 30 seconds. To prevent lose
 
 Editor can be customised in the  the settings menu. 
 
-* THEMES: Choose between many themes Editor theme.
-* FONTS: Font family of the text in the editor.
-* SIZE: Size of the text in the editor.
-* RESET : Resets all the setting to default.
+* **THEMES**: Choose between many themes Editor theme.
+* **FONTS**: Font family of the text in the editor.
+* **SIZE**: Size of the font in the editor.
+* **RESET** : Resets all the setting to default.
 
 ## Functions
 
-* Switching between different laguages.
-* Settings button to customize the editor.
-* Buttons for running the code, saving it and clearing the code editor.
-* Uploading and Downloading Code.
+1. Switching between different laguages.
+2. Settings button to customize the editor.
+3. Buttons for running the code, saving it and clearing the code editor.
+4. Uploading and Downloading Code.
+
+![alt Img](http://i.imgur.com/AblFpfZ.png)
 
 ## Contributing
 
 ### Opening Issues
-
 ##### Issues are intended for bug reporting and feature requests.
 
 Before you open a new issue, make sure it isn't already in the list of [existing issues.](http://www.github.com/coding-blocks/ide/issues)
-
-
 
 ## API 
 This hits the Coding Blocks Judge API, which you can find documented here
