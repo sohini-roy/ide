@@ -1,4 +1,6 @@
-# Coding Blocks IDE  ![alt img](http://i.imgur.com/mTjKodQ.png)
+![alt img](http://i.imgur.com/mTjKodQ.png)
+
+# Coding Blocks IDE  
 Coding Blocks IDE is an online IDE which supports compliation of multiple programming languages . 
 [Live Demo](https://codingblocks.com/ide/)
 
