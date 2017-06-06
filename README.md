@@ -68,7 +68,6 @@ Editor can be customized in the the settings menu.
 
 ![alt Img](http://i.imgur.com/AblFpfZ.png)
 
-
 ## API 
 This hits the Coding Blocks Judge API, which you can find documented here.
 
