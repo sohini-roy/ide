@@ -240,6 +240,10 @@ $(document).ready(function () {
         $('#editor').toggleClass('change_height');
         editor.resize();
     });
+
+    $('#copyToClip').click(function () {
+        copyEditorCode();
+    });
 });
 
 var langName = {
@@ -283,4 +287,10 @@ function toggleCustInp() {
         inp.html(localStorage.getItem('inputData'));
     }
     $("#custInpBox").toggleClass('hide');
+}
+
+function copyEditorCode(){
+    ace.edit("editor").selectAll();
+    ace.edit("editor").focus();
+    document.execCommand('copy');
 }
