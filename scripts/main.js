@@ -289,7 +289,7 @@ function toggleCustInp() {
     $("#custInpBox").toggleClass('hide');
 }
 
-function copyEditorCode(){
+function copyEditorCode() {
     ace.edit("editor").selectAll();
     ace.edit("editor").focus();
     document.execCommand('copy');
