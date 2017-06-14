@@ -135,10 +135,10 @@ function resetSettings() {
     editor.setTheme("ace/theme/dawn");
     editor.setOptions({
         fontFamily: "Ubuntu Mono",
-        fontSize: "12px"
+        fontSize: "16px"
     });
     editorFontFamily="Ubuntu Mono";
-    editorFontSize = "12";
+    editorFontSize = "16";
     editorTheme = "dawn";
     changes = 1;
 }
