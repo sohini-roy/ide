@@ -8,8 +8,8 @@ var lang_sample;
 var ifLocalStorage = 0;
 var ifUpload = 0;
 var editorTheme = "dawn";
-var editorFontFamily = "Monaco";
-var editorFontSize = "12";
+var editorFontFamily = "Ubuntu Mono";
+var editorFontSize = "16";
 var editorHasChanged = false;
 var autoSave = 1;
 var changes = 0;
@@ -26,6 +26,10 @@ function init() {
     if (!ifUpload) {
         lang_sample = lang_samples[lang];
         ace.edit("editor").setValue(lang_sample);
+        editor.setOptions({
+            fontSize: '16px',
+            fontFamily: "Ubuntu Mono"
+        });
         editorHasChanged = false;
     }
     console.log("Language = " + lang);
@@ -136,6 +140,7 @@ $(document).ready(function () {
             $(this).closest('li').addClass('active');
             init();
         }
+        editor.getSession().setMode(lang_mode[$(this).attr('id')]);
     });
     $('#keepChanges').click(function () {
         lang = $(select).attr('id');
@@ -248,6 +253,14 @@ var langName = {
     java: "Java",
     py2: "Python",
     js: "JavaScript"
+};
+
+var lang_mode = {
+  c: "ace/mode/c_cpp",
+  cpp: "ace/mode/c_cpp",
+  java: "ace/mode/java",
+  py2: "ace/mode/python",
+  js: "ace/mode/javascript"
 };
 
 function requestFullScreen(element) {
