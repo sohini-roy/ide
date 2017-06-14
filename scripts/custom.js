@@ -12,8 +12,10 @@ function loadLocalStorage() {
         var cacheSize = localStorage.getItem('Size');
         var inputs = localStorage.getItem('Input');
         var autoSaveToggle = localStorage.getItem('autoSave');
-        if (codeLang != undefined)
+        if (codeLang != undefined){
             lang = codeLang;
+            editor.getSession().setMode(lang_mode[codeLang]);
+          }
         if (code != undefined) {
             ace.edit("editor").setValue(code + '');
         }
