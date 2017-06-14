@@ -136,6 +136,7 @@ $(document).ready(function () {
             $(this).closest('li').addClass('active');
             init();
         }
+        editor.getSession().setMode(lang_mode[$(this).attr('id')]);
     });
     $('#keepChanges').click(function () {
         lang = $(select).attr('id');
@@ -242,6 +243,14 @@ var langName = {
     java: "Java",
     py2: "Python",
     js: "JavaScript"
+};
+
+var lang_mode = {
+  c: "ace/mode/c_cpp",
+  cpp: "ace/mode/c_cpp",
+  java: "ace/mode/java",
+  py2: "ace/mode/python",
+  js: "ace/mode/javascript"
 };
 
 function requestFullScreen(element) {

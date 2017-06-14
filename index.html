@@ -135,7 +135,7 @@
                         <li><a onclick="setFont('Inconsolata');" href="#">Inconsolata</a></li>
                         <li><a onclick="setFont('Source Code Pro');" href="#">Source Code Pro</a></li>
                         <li><a onclick="setFont('Ubuntu Mono');" href="#">Ubuntu Mono</a></li>
-			
+
                     </ul>
                 </div>
                 <div class="modal-group">
@@ -360,7 +360,12 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="./scripts/ext-language_tools.js"></script>
+<script src="./scripts/c_cpp.js"></script>
+<script src="./scripts/python.js"></script>
+<script src="./scripts/java.js"></script>
 <script>
+    ace.require("ace/ext/language_tools");
     var editor = ace.edit("editor");
     editor.getSession().setMode("ace/mode/c_cpp");
     editor.setTheme("ace/theme/dawn");
@@ -368,6 +373,11 @@
     editor.getSession().on('change', function () {
         changes = 1;
     });
+    editor.setOptions({
+          enableBasicAutocompletion: true,
+          enableSnippets: true,
+          enableLiveAutocompletion: true
+      });
 </script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
