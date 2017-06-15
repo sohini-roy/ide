@@ -1733,6 +1733,12 @@ footer.bg-dark a {
   top:-30px;
   left : -5px;
 }
+
+#copyBtn {
+    top: -30px;
+    right: 10px;
+
+}
 .sidecol {
     max-width: 100%;
     margin-left: 0;
