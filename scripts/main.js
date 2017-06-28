@@ -257,6 +257,17 @@ $('#fileName').on('change', function () {
     changes = 1;
 });
 
+$('#editor-clear').click(function () {
+    $('#fullscreenOutput').hide();
+    resetSettings();
+    document.getElementById('test-input').value = "";
+    document.getElementById('fileName').value = "";
+    lang_sample = lang_samples[lang];
+    ace.edit("editor").setValue(lang_sample);
+    ifUpload = 0;
+    localStorage.clear();
+});
+
 //toggle full-screen mode
 $(document).ready(function () {
     if ($(window).width() > 1024) {
