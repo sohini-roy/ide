@@ -61,7 +61,7 @@ $(document).ready(function () {
         runButton.button('loading');
 
         var source = ace.edit("editor").getValue();
-        var testcases = $("#test-input").val(); // cusotm inputs
+        var testcases = $("#test-input").val(); // custom inputs
 
         if (lang === 'js') {
             var jsWorker = new Worker('scripts/javascriptWebWorker.js');
@@ -104,6 +104,60 @@ $(document).ready(function () {
                 var output = data.data.testcases[0].output;
                 output = window.atob(output);
                 $('#output').text(output);
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+    });
+
+    var fullscreenRunButton = $('#editor-submit');
+    fullscreenRunButton.click(function () {
+        fullscreenRunButton.button('loading');
+
+        var source = ace.edit("editor").getValue();
+        var testcases = $("#test-input").val();
+
+        if (lang === 'js') {
+            var jsWorker = new Worker('scripts/javascriptWebWorker.js');
+            var input = JSON.stringify(testcases);
+            console.log(input);
+            jsWorker.postMessage({source, input});
+
+            jsWorker.onmessage = function (e) {
+                console.log(e.data);
+                runButton.button('reset');
+                $('#fullscreenOutputPanel').text(e.data.output.join('\n'));
+            };
+
+            return;
+        }
+
+        source = window.btoa(source);
+        testcases = window.btoa(testcases);
+        var expected = '';
+
+        var config = {
+            headers: {'Access-Token': '79f3c2f8301fc60565de003f4ac76a1d4e5242cb0836995ec2bd28fd083ce86f'}
+        };
+        axios.post(URL + 'submission', {
+            lang: lang,
+            source: source,
+            test_count: 1,
+            input: [testcases],
+            expected_output: [expected],
+            get_output: true,
+            wait: true
+        }, config).then(function (response) {
+            fullscreenRunButton.button('reset');
+            var data = response.data;
+            if (data.result == "compile_error") {
+                var output = data.error;
+                output = window.atob(output);
+                $('#fullscreenOutputPanel').text(output);
+            } else {
+                var output = data.data.testcases[0].output;
+                output = window.atob(output);
+                $('#fullscreenOutputPanel').text(output);
             }
         }).catch(function (error) {
             console.log(error);
@@ -222,10 +276,15 @@ $(document).ready(function () {
         $('.headPanel').toggleClass('fullscreen');
         if (fs) {
             $('#custInp').hide();
+            $('#editor-submit').show();
+            $('#editor-clear').show();
             requestFullScreen(elem);
         }
         else {
             $('#custInp').show();
+            $('#editor-submit').hide();
+            $('#editor-clear').hide();
+            $('#fullscreenOutput').hide();
             exitFullScreen();
         }
         var $this = $(this);
