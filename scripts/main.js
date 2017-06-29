@@ -257,16 +257,19 @@ $('#fileName').on('change', function () {
     changes = 1;
 });
 
-$('#editor-clear').click(function () {
+$('#editor-clear').click(function (e) {
+    e.preventDefault();
     $('#fullscreenOutput').hide();
     resetSettings();
-    document.getElementById('test-input').value = "";
     document.getElementById('fileName').value = "";
     lang_sample = lang_samples[lang];
     ace.edit("editor").setValue(lang_sample);
     ifUpload = 0;
     localStorage.clear();
 });
+
+// change content back 
+$('#test-input').html(" ");
 
 //toggle full-screen mode
 $(document).ready(function () {
