@@ -1,0 +1,10 @@
+s = input().strip();
+print(s);
+l = len(s);
+print(l);
+alpha = [];
+q = s[3];
+print(q);
+k = s.count(q);
+alpha[ord(q)] = 1;
+print(s[3]);
